@@ -30,4 +30,4 @@ def get_authentik_groups():
             authentik_groups.append(group.name)
 
     logger.info(f"Got {len(authentik_groups)} groups from Authentik")
-    return(authecola ntik_groups)
+    return(authentik_groups)
