@@ -26,8 +26,8 @@ def get_authentik_groups():
         groups_list = api_instance.core_groups_list(include_users=False).results
         for group in groups_list:
             if group_regex:
-                if not bool(group_regex.match(name)): continue
+                if not bool(group_regex.match(group.name)): continue
             authentik_groups.append(group.name)
 
     logger.info(f"Got {len(authentik_groups)} groups from Authentik")
-    return(authentik_groups)
+    return(authecola ntik_groups)
